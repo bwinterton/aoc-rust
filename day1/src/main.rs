@@ -13,5 +13,20 @@ fn main() {
     let mut f = File::open(&args[1]).unwrap();
     let mut instructions = String::new();
     f.read_to_string(&mut instructions).unwrap();
-    println!("Given Instructions: {}", instructions);
+    let final_floor = process_instructions(instructions);
+
+    println!("Santa ends up on floor {}", final_floor);
+}
+
+fn process_instructions(ins: String) -> i32{
+    let mut floor = 0;
+
+    for c in ins.chars() {
+        match c {
+            '(' => { floor += 1; },
+            ')' => { floor -= 1; },
+            _ => {}
+        }
+    }
+    return return floor;
 }
