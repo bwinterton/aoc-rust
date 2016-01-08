@@ -28,5 +28,5 @@ fn process_instructions(ins: String) -> i32{
             _ => {}
         }
     }
-    return return floor;
+    floor
 }
