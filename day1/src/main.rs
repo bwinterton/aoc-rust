@@ -30,3 +30,19 @@ fn process_instructions(ins: String) -> i32{
     }
     floor
 }
+
+#[cfg(test)]
+mod tests{
+    use super::process_instructions;
+
+    #[test]
+    fn test_process() {
+        assert_eq!(process_instructions(String::from("((()))")), 0);
+        assert_eq!(process_instructions(String::from(")))(((")), 0);
+        assert_eq!(process_instructions(String::from("()()()")), 0);
+        assert_eq!(process_instructions(String::from("((())")), 1);
+        assert_eq!(process_instructions(String::from("(()))")), -1);
+        assert_eq!(process_instructions(String::from("(((((")), 5);
+        assert_eq!(process_instructions(String::from(")))))")), -5);
+    }
+}
