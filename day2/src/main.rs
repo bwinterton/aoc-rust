@@ -85,3 +85,37 @@ fn parse_file(filename: &String) -> Vec<Dimensions> {
     dims
 
 }
+
+#[cfg(test)]
+mod tests {
+
+    use super::Dimensions;
+    use super::calculate_area;
+    use super::calculate_ribbon_length;
+
+    #[test]
+    fn test_calc_area() {
+        let cases: Vec<(i32, Dimensions)> = vec![
+            (7, Dimensions{length: 1, width: 1, height: 1}),
+            (24, Dimensions{length: 1, width: 2, height: 3}),
+            (63, Dimensions{length: 3, width: 3, height: 3}),
+        ];
+
+        for case in cases {
+            assert_eq!(case.0, calculate_area(&case.1));
+        }
+    }
+
+    #[test]
+    fn test_calc_ribbon() {
+        let cases: Vec<(i32, Dimensions)> = vec![
+            (5, Dimensions{length: 1, width: 1, height: 1}),
+            (12, Dimensions{length: 1, width: 2, height: 3}),
+            (39, Dimensions{length: 3, width: 3, height: 3}),
+        ];
+
+        for case in cases {
+            assert_eq!(case.0, calculate_ribbon_length(&case.1));
+        }
+    }
+}
