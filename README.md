@@ -18,5 +18,5 @@ like to run (i.e. day1 for Day 1's solution).
 
 ### License
 
-All code in this repository is licensed under the MIT License, (c) 2016 Brayden
+All code in this repository is licensed under the MIT License, (c) 2017 Brayden
 Winterton
