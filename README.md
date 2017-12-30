@@ -16,6 +16,15 @@ cargo run {path to input}
 This command should be run from the directory of whichever solution you would
 like to run (i.e. day1 for Day 1's solution).
 
+### Organization
+
+This repo contains solutions to the AoC problems from multiple years.
+The solutions are organized by year and then by day. As of 2017, each solution
+folder will also have a README that states the lessons that I learned by
+producing that day's solution. These lessons will be specifically geared
+towards what I learned about Rust as that is one of the main reasons behind
+this project.
+
 ### License
 
 All code in this repository is licensed under the MIT License, (c) 2017 Brayden
